@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vn.lvc.quanlychitieu.ThuNhapActivity">
+
+        <include
+            android:id="@+id/toolbarThuNhap"
+            layout="@layout/custom_toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+           />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbarThuNhap"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="84dp"
+        android:text="Income type :"
+        android:textColor="#59BFDF"
+        android:textSize="20sp" />
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spnLoaiThu"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_toRightOf="@id/textView"
+            android:layout_alignTop="@id/textView"
+            />
+
+        <ImageView
+            android:id="@+id/ivThemLoaiThu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="13dp"
+            android:onClick="listLoaiThu"
+            app:srcCompat="@drawable/ic_add_image"
+            android:layout_alignTop="@id/spnLoaiThu"
+            android:layout_toRightOf="@id/spnLoaiThu"
+            />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_alignLeft="@id/textView"
+        android:layout_marginTop="36dp"
+        android:text="Amount : "
+        android:textColor="#59BFDF"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtTienThu"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spnLoaiThu"
+        android:layout_alignLeft="@id/spnLoaiThu"
+        android:layout_alignRight="@id/spnLoaiThu"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Type"
+        android:inputType="numberDecimal"
+        android:maxLength="13" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="VND"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/edtTienThu"
+            android:layout_below="@id/ivThemLoaiThu"
+            android:layout_alignLeft="@id/ivThemLoaiThu"
+        />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_alignLeft="@id/textView2"
+        android:layout_marginTop="36dp"
+        android:text="Date : "
+        android:textColor="#59BFDF"
+        android:textSize="20sp" />
+
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:id="@+id/tvNgayThu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtTienThu"
+            android:layout_alignLeft="@id/edtTienThu"
+            android:layout_marginTop="36dp"
+            android:text="20-11-2020"
+            android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/ivChonNgayThu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="39dp"
+            android:onClick="chonNgay"
+            app:srcCompat="@drawable/ic_lich"
+            android:layout_alignLeft="@id/textView3"
+            android:layout_below="@id/textView3"
+            />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_alignLeft="@id/textView4"
+        android:layout_marginTop="36dp"
+        android:text="Note : "
+        android:textColor="#59BFDF"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtGhiChuThu"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNgayThu"
+        android:layout_alignLeft="@id/edtTienThu"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Type"
+        android:inputType="textPersonName"
+        android:maxLength="20" />
+
+
+    <Button
+        android:id="@+id/btnLuuThu"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView6"
+        android:layout_alignLeft="@id/textView6"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/rounded_button"
+        android:onClick="luu"
+        android:text="Save"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/btnHuyThu"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnLuuThu"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/btnLuuThu"
+        android:background="@drawable/rounded_button"
+        android:onClick="huy"
+        android:text="Cancel"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="vn.lvc.quanlychitieu.fragment.ThongKeFragment">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <com.google.android.material.tabs.TabLayout
+           app:tabTextColor="@color/colorWhite"
+           android:background="@color/colorPrimary"
+           android:layout_width="match_parent"
+           android:layout_alignParentTop="true"
+           android:layout_height="wrap_content"
+           android:id="@+id/tlThongke"/>
+       <androidx.viewpager.widget.ViewPager
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@id/tlThongke"
+           android:id="@+id/vpThongke"
+           />
+   </RelativeLayout>
+
+</FrameLayout>

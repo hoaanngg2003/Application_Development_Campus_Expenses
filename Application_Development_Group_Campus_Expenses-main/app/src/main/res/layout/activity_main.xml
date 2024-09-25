@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vn.lvc.quanlychitieu.MainActivity">
+    <include
+        layout="@layout/custom_toolbar1"
+        android:id="@+id/toolbar_main"/>
+    <FrameLayout
+        android:layout_below="@id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_layout"
+        android:layout_above="@id/bottom_naviagtionview"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@color/color_custom_nav"
+        app:itemIconTint="@color/color_custom_nav"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_bottom_nav"
+        style="@style/AppTheme"
+        android:id="@+id/bottom_naviagtionview"
+        />
+
+    <Button
+        android:id="@+id/settingbtt"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/baseline_settings_24" />
+
+</RelativeLayout>
